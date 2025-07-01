@@ -1,0 +1,28 @@
+import React from 'react';
+import { Grid } from '@mui/material';
+import ActionAreaCard from '../../components/cardadmin/card'; 
+
+export default function Home() {
+  return (
+    <div className='dashboardAdmin'>
+      <div className='dashboardAdminWrappwer'>
+        <h1>Welcome to the Dashboard Admin</h1>
+
+        <Grid container spacing={3} sx={{ mt: 2 }}>
+          <Grid item xs={12} sm={6} md={3}>
+            <ActionAreaCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <ActionAreaCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <ActionAreaCard />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <ActionAreaCard />
+          </Grid>
+        </Grid>
+      </div>
+    </div>
+  );
+}

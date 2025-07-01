@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'DimaFantesy';
+    src: url('./../font/Dima/DimaFantasy.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Estedad Bold';
+    src: url('./../font/Estedad/Estedad-Bold.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Estedad Regular';
+    src: url('./../font/Estedad/Estedad-Regular.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Estedad Light';
+    src: url('./../font/Estedad/Estedad-Light.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Estedad SemiBold';
+    src: url('./../font/Estedad/Estedad-SemiBold.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Estedad Medium';
+    src: url('./../font/Estedad/Estedad-Medium.ttf') format('truetype');
+  }

@@ -1,0 +1,82 @@
+.sidebar {
+  height: calc(100vh - 50px);
+  background-color: rgb(251, 251, 255);
+  position: sticky;
+  top: 50px;
+  direction: rtl;
+  width: 60px;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  z-index: 100;
+}
+
+.sidebar:hover {
+  width: 240px;
+}
+
+.sidebarWrapper {
+  padding: 20px 10px;
+  color: #555;
+  transition: padding 0.3s ease;
+}
+
+.sidebar:hover .sidebarWrapper {
+  padding: 20px;
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  color: rgb(187, 186, 186);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar:hover .sidebarTitle {
+  opacity: 1;
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarListItem {
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.sidebarListItem:hover,
+.sidebarListItem.active {
+  background-color: #fce4ec;
+  color: #ec407a;
+}
+
+.sidebarIcon {
+  margin-left: 8px;
+  font-size: 20px;
+  color: #FF4081;
+}
+
+.itemLabel {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .itemLabel {
+  opacity: 1;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
