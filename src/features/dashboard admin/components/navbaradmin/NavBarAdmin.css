@@ -1,0 +1,75 @@
+.topbar {
+  height: 60px;
+  background: linear-gradient(135deg, #fce4ec 0%, #fff 100%);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  direction: rtl;
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.10);
+}
+
+.topbarWrapper {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 18px;
+  font-size: 64px;
+  cursor: pointer;
+  color: #e91e63;
+  text-align: right;
+  user-select: none;
+  font-family: "DimaFantasy";
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.topbarIconContainer:hover {
+  transform: scale(1.1);
+}
+
+.iconPink {
+  font-size: 28px !important;
+  color: #e91e63;
+}
+
+.topIconBadge {
+  min-width: 18px;
+  height: 18px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0 5px;
+  user-select: none;
+}
+
+.badgePurple {
+  background-color: #ec407a;
+}
+
+.badgeGreen {
+  background-color: #f06292;
+}

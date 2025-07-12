@@ -1,0 +1,22 @@
+{
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "css": "css",
+      "html": "html"
+    },
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "css.validate": true,
+    "files.associations": {
+      "*.css": "css",
+      "*.scss": "scss"
+    }
+  }
+  

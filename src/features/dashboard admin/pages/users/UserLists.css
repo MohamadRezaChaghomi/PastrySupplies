@@ -1,0 +1,44 @@
+.user-list-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: 'Estedad', Tahoma, Arial, sans-serif;
+  padding: 40px 30px 0 30px;
+}
+
+.user-list-title {
+  color: #e91e63;
+  margin-bottom: 32px;
+  font-family: 'Estedad', Tahoma, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  animation: fadeInDown 1s;
+  text-align: right;
+  align-self: flex-start;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.table-fade-in {
+  animation: fadeIn 1.2s;
+  width: 100%;
+  max-width: 800px;
+  align-self: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(233, 30, 99, 0.08);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}

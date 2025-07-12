@@ -1,0 +1,103 @@
+.mega-menu-container {
+  position: absolute;
+  top: 100%;
+  right: 0; /* داخل پدر راست‌چین */
+  width: 800px; /* یا هر عرض دلخواه */
+  max-width: 100vw;
+  direction: rtl;
+  z-index: 1000;
+  display: none;
+}
+
+
+.mega-menu-container.show {
+  display: block;
+}
+
+.mega-menu {
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  width: 180px;
+  display: flex;
+  border-radius: 10px;
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: Estedad SemiBold;
+  background-color: #e4e4e45b;
+  border-radius: 10px;
+
+
+}
+
+.category-item {
+  position: relative;
+  padding: 8px 16px;
+  white-space: nowrap;
+  border-radius: 10px;
+
+
+}
+
+.category-item:hover {
+  background-color: #fff;
+  color: #FF7CA8;
+
+}
+
+.category-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-label:hover {
+
+}
+
+/* Sub-menu changes */
+.sub-menu.two-level {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  background-color: #fff;
+  padding: 15px;
+  min-width: 450px;
+  max-width: 600px;
+  max-height: 270px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  direction: rtl;
+  text-align: right;
+}
+
+.sub-section-title {
+  margin-bottom: 6px;
+  color: #444444;
+
+}
+.sub-section-title:hover {
+}
+.sub-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-item {
+  font-size: 14px;
+  color: #333;
+  padding: 4px 0;
+  font-family: Estedad Light;
+  margin-right: 12px;
+}
+.sub-item:hover {
+  color: #FF7CA8;
+}
