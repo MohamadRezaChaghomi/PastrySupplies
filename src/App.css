@@ -1,8 +1,6 @@
 body, html, #root {
   background: #fff;
-  margin: 0;
-  box-sizing: border-box;
-  
+  margin: 0;  
 }
 
 .mainLayout {
@@ -24,4 +22,10 @@ body, html, #root {
   padding: 32px 24px 24px 24px;
   background: #fff;
   min-height: 0;
+}
+
+@import url('./assets/Css/Font.css');
+
+body {
+  font-family: 'Estedad', sans-serif;
 }

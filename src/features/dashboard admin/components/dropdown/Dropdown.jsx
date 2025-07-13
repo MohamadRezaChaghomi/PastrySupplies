@@ -22,7 +22,7 @@ export default function Dropdown() {
         onMouseEnter={() => setOpen(true)}
       >
         <ListOutlinedIcon className="sidebarIcon" />
-        <span className="itemLabel">لیست محصولات</span>
+        <span className="itemLabel">لیست</span>
         <ExpandMoreIcon className={`arrowIcon ${open ? "rotate" : ""}`} />
       </div>
 

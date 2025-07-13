@@ -14,7 +14,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarLogo">
-          <CakeOutlinedIcon style={{ fontSize: 25, color: "#e91e63", marginLeft: 8 }} />
+          <CakeOutlinedIcon className="sidebarIconOnly" />
           <span className="sidebarLogoText">پنل ادمین</span>
         </div>
 
@@ -33,7 +33,7 @@ export default function Sidebar() {
         <ul className="sidebarList">
           <Link to="/messages" className="link">
             <li className={`sidebarListItem ${location.pathname === "/messages" ? "active" : ""}`}>
-              <MailOutlineIcon className="sidebarIcon" style={{ color: "#e91e63" }} />
+              <MailOutlineIcon className="sidebarIcon" />
               <span className="itemLabel">پیام‌ها</span>
             </li>
           </Link>
@@ -43,7 +43,7 @@ export default function Sidebar() {
         <ul className="sidebarList">
           <Link to="/settings" className="link">
             <li className={`sidebarListItem ${location.pathname === "/settings" ? "active" : ""}`}>
-              <SettingsOutlinedIcon className="sidebarIcon" style={{ color: "#e91e63" }} />
+              <SettingsOutlinedIcon className="sidebarIcon" />
               <span className="itemLabel">تنظیمات</span>
             </li>
           </Link>

@@ -5,11 +5,11 @@
   align-items: flex-start;
   justify-content: flex-start;
   font-family: 'Estedad', Tahoma, Arial, sans-serif;
-  padding: 40px 30px 0 30px;
+  padding: 20px 30px 0 30px;
 }
 
 .user-list-title {
-  color: #e91e63;
+  color: #C2185B;
   margin-bottom: 32px;
   font-family: 'Estedad', Tahoma, Arial, sans-serif;
   font-weight: 700;
