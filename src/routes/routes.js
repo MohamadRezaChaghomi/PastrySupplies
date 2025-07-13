@@ -1,7 +1,7 @@
 // src/routes/routes.js
 import UserLists from '../features/dashboard admin/pages/users/UserLists';
 import Products from '../features/dashboard admin/pages/products/ProducstAdmin';
-import Analystics from '../features/dashboard admin/pages/Analystics/Analystics';
+import ReportsPage from '../features/dashboard admin/pages/reportsPage/ReportsPage';
 import Sales from '../features/dashboard admin/pages/Sales/Sales';
 import Category from '../features/dashboard admin/pages/category/Category';
 import Settings from '../features/dashboard admin/pages/settings/Settings';
@@ -12,7 +12,7 @@ import Messages from '../features/dashboard admin/pages/messages/Message';
 const routes = [
   { path: '/userlists', element: <UserLists /> },
   { path: '/products', element: <Products /> },
-  { path: '/analytics', element: <Analystics /> },
+  { path: '/reportspage', element: <ReportsPage /> },
   { path: '/sales', element: <Sales /> },
   { path: '/category', element: <Category /> },
   { path: '/settings', element: <Settings /> },

@@ -5,6 +5,7 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import Dropdown from "../dropdown/Dropdown";
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 import "./Sidebar.css";
 
 export default function Sidebar() {
@@ -26,6 +27,13 @@ export default function Sidebar() {
               <span className="itemLabel">کاربران</span>
             </li>
           </Link>
+          <Link to="/reportspage" className="link">
+            <li className={`sidebarListItem ${location.pathname === "/reportspage" ? "active" : ""}`}>
+              <AssessmentOutlinedIcon className="sidebarIcon" />
+              <span className="itemLabel">گزارشات</span>
+            </li>
+          </Link>
+
           <Dropdown />
         </ul>
 
