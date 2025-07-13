@@ -1,26 +1,38 @@
-// src/pages/UsersPage.js
+// src/pages/CategoryListPage.jsx
 import React from 'react';
-import SimpleTable from '../../../../components/Table/Table';
+import { CssBaseline, Container, Typography, Stack } from '@mui/material';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import { ThemeProvider } from '@mui/material/styles';
+import pinkTheme from '../../../../themes/pinkTheme';
+import VirtualizedTable from '../../components/table/Table';
 
-function Category() {
-  const columns = [
-    { label: 'شماره', accessor: 'number' },
-    { label: 'نام کاربر', accessor: 'name' },
-    { label: 'ایمیل', accessor: 'email' },
-  ];
+const categoryColumns = [
+  { id: 'name', label: 'نام دسته‌بندی', minWidth: 200 },
+  { id: 'description', label: 'توضیحات', minWidth: 300 },
+];
 
-  const data = new Array(1000).fill(0).map((_, i) => ({
-    number: `${i + 1}`,
-    name: `کاربر ${i + 1}`,
-    email: `user${i + 1}@example.com`,
-  }));
+const categories = [
+  { id: 1, name: 'کیک و شیرینی', description: 'انواع کیک و شیرینی خانگی' },
+  { id: 2, name: 'نوشیدنی‌ها', description: 'آبمیوه و نوشیدنی‌های سرد و گرم' },
+  { id: 3, name: 'شکلات و آبنبات', description: 'انواع شکلات‌ها و آبنبات‌ها' },
+  // میتونی بیشتر اضافه کنی
+];
 
+const CategoryListPage = () => {
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>لیست دست بندی ها </h2>
-      <SimpleTable columns={columns} data={data} />
-    </div>
+    <ThemeProvider theme={pinkTheme}>
+      <CssBaseline />
+      <Container maxWidth="md" sx={{ mt: 6, direction: 'rtl' }}>
+        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1} sx={{ mb: 2 }}>
+          <Typography variant="h4" color="primary">
+            دسته‌بندی‌ها
+          </Typography>
+          <CategoryOutlinedIcon color="primary" fontSize="large" />
+        </Stack>
+        <VirtualizedTable columns={categoryColumns} data={categories} height={400} />
+      </Container>
+    </ThemeProvider>
   );
-}
+};
 
-export default Category;
+export default CategoryListPage;
