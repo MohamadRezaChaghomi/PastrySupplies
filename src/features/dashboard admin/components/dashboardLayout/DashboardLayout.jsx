@@ -1,27 +1,18 @@
 import React from 'react';
-import { Container, Typography, Box } from '@mui/material';
+import { Container, Box, Typography } from '@mui/material';
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
+import './DashboardLayout.css';
 
 const DashboardLayout = ({ title, children }) => {
   return (
-    <Container maxWidth="lg" sx={{ mt: 4, mb: 4, direction: 'rtl' }}>
-      <Box 
-        sx={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          gap: 1, 
-          mb: 3, 
-          color: 'primary.main',
-          textAlign: 'right',
-          justifyContent: 'flex-end',
-        }}
-      >
-        <Typography variant="h4" component="h1" fontWeight="bold">
+    <Container className="dashboard-container">
+      <Box className="dashboard-header">
+        <Typography className="dashboard-title" component="h1" variant="h4">
+          <AssessmentOutlinedIcon fontSize="large" sx={{ mr: 1, color: 'primary.main' }} />
           {title}
         </Typography>
-        <AssessmentOutlinedIcon fontSize="large" />
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+      <Box className="dashboard-content">
         {children}
       </Box>
     </Container>

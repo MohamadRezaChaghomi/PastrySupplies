@@ -1,6 +1,6 @@
 .virtualizedTable {
   width: 100%;
-  height: 400px; /* میتونی این رو در props تغییر بدی */
+  height: 100%;
   direction: rtl;
   background-color: var(--bg-paper);
 }
@@ -8,10 +8,6 @@
 .virtualizedTable table {
   width: 100%;
   border-collapse: collapse;
-}
-
-.virtualizedTable thead tr {
-  background-color: transparent !important;
 }
 
 .virtualizedTable thead th {
@@ -31,7 +27,7 @@
 }
 
 .virtualizedTable tbody tr:hover {
-  background-color: var(--primary-light);
+  background-color: #fce4ec !important;
 }
 
 .virtualizedTable tbody td {

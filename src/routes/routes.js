@@ -4,10 +4,10 @@ import Products from '../features/dashboard admin/pages/products/ProducstAdmin';
 import ReportsPage from '../features/dashboard admin/pages/reportsPage/ReportsPage';
 import Sales from '../features/dashboard admin/pages/Sales/Sales';
 import Category from '../features/dashboard admin/pages/category/Category';
-import Settings from '../features/dashboard admin/pages/settings/Settings';
 import NewCategory from '../features/dashboard admin/pages/newcategory/NewCategory';
 import NewProduct from '../features/dashboard admin/pages/newproduct/NewProduct';
 import Messages from '../features/dashboard admin/pages/messages/Message';
+import Settings from '../features/dashboard admin/pages/adminsettingspage/AdminSettingsPage';
 
 const routes = [
   { path: '/userlists', element: <UserLists /> },

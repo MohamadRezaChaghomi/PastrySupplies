@@ -1,0 +1,31 @@
+.dashboard-container {
+  direction: rtl;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: #e91e63; /* primary.main */
+  text-align: right;
+}
+
+.dashboard-title {
+  font-weight: bold;
+  font-size: 2rem; /* h4 */
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

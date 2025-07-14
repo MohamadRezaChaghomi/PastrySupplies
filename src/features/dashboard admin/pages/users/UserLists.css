@@ -1,44 +1,62 @@
-.user-list-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-family: 'Estedad', Tahoma, Arial, sans-serif;
-  padding: 20px 30px 0 30px;
-}
-
 .user-list-title {
-  color: #C2185B;
-  margin-bottom: 32px;
-  font-family: 'Estedad', Tahoma, Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 2rem;
-  animation: fadeInDown 1s;
-  text-align: right;
-  align-self: flex-start;
-  padding-bottom: 24px;
   display: flex;
   align-items: center;
+  margin-bottom: 24px;
+  animation: fadeInDown 0.8s ease;
+  direction: rtl !important;
 }
 
-.table-fade-in {
-  animation: fadeIn 1.2s;
-  width: 100%;
-  max-width: 800px;
-  align-self: center;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(233, 30, 99, 0.08);
+.user-icon {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-left: 8px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px);}
-  to { opacity: 1; transform: translateY(0);}
+.user-title-text {
+  color: #e91e63;
+  font-family: 'Estedad', Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.user-table-card {
+  direction: rtl;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.user-table-card:hover {
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  transform: translateY(-6px);
+  z-index: 1;
+}
+
+.animated-fadein {
+  animation: fadein 0.8s ease forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-30px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

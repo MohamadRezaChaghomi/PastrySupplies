@@ -6,14 +6,12 @@ import {
   Box,
   Typography,
 } from '@mui/material';
-import './ProductForm.css'; // فایل CSS را ایمپورت کن
+import './AddCategory.css';
 
-const ProductForm = () => {
+const CategoryForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    price: '',
-    category: '',
   });
 
   const handleChange = (e) => {
@@ -25,9 +23,9 @@ const ProductForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Product Data:', formData);
-    alert('محصول با موفقیت ثبت شد!');
-    setFormData({ name: '', description: '', price: '', category: '' });
+    console.log('Category Data:', formData);
+    alert('دسته‌بندی با موفقیت ثبت شد!');
+    setFormData({ name: '', description: '' });
   };
 
   return (
@@ -38,14 +36,18 @@ const ProductForm = () => {
       autoComplete="off"
       sx={{ direction: 'rtl' }}
     >
-      {/* عنوان فرم با استایل جداگانه */}
-      <Typography variant="h6" className="product-title">
-        افزودن محصول
+      {/* 🔽 عنوان بالا فرم */}
+      <Typography
+        className="new-category-title-text"
+        variant="h6"
+        sx={{ mb: 3 }}
+      >
+        افزودن دسته‌بندی
       </Typography>
 
       <Stack spacing={3}>
         <TextField
-          label="نام محصول"
+          label="نام دسته‌بندی"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -61,34 +63,17 @@ const ProductForm = () => {
           rows={3}
           fullWidth
         />
-        <TextField
-          label="قیمت (تومان)"
-          name="price"
-          type="number"
-          value={formData.price}
-          onChange={handleChange}
-          required
-          fullWidth
-          inputProps={{ min: 0 }}
-        />
-        <TextField
-          label="دسته‌بندی"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-          fullWidth
-        />
         <Button
           variant="contained"
           color="primary"
           type="submit"
-          sx={{ alignSelf: 'flex-end' }}
+          fullWidth
         >
-          ثبت محصول
+          ثبت دسته‌بندی
         </Button>
       </Stack>
     </Box>
   );
 };
 
-export default ProductForm;
+export default CategoryForm;

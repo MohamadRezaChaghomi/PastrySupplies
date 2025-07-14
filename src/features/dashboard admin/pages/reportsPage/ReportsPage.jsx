@@ -6,7 +6,7 @@ import CategoryStats from '../../components/categoryStats/CategoryStats';
 
 const ReportsPage = () => {
   return (
-    <DashboardLayout title="داشبورد گزارشات">
+    <DashboardLayout title=" گزارشات">
       <SalesChart />
       <ProductStats />
       <CategoryStats />

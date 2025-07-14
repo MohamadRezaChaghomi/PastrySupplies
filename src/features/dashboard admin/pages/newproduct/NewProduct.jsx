@@ -1,31 +1,39 @@
-// src/pages/AddProductPage.jsx
+// src/features/dashboard admin/pages/newproduct/NewProduct.jsx
 import React from 'react';
 import {
   CssBaseline,
   Container,
   Typography,
   Stack,
-  ThemeProvider
+  ThemeProvider,
 } from '@mui/material';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import pinkTheme from '../../../../themes/pinkTheme';
 import ProductForm from '../../components/addproduct/ProductForm';
+import './NewProduct.css';
 
-const AddProductPage = () => {
+
+const NewProductPage = () => {
   return (
     <ThemeProvider theme={pinkTheme}>
       <CssBaseline />
       <Container maxWidth="sm" sx={{ mt: 6, direction: 'rtl' }}>
-        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1} sx={{ mb: 2 }}>
-          <Typography variant="h4" color="primary">
-            ایجاد محصول
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="flex-end"
+          className="new-product-title"
+        >
+          <AddCircleOutlineOutlinedIcon className="new-product-icon" />
+          <Typography className="new-product-title-text" variant="h4" component="h1">
+            ایجاد محصول جدید
           </Typography>
-          <AddCircleOutlineOutlinedIcon color="primary" fontSize="large" />
         </Stack>
-        <ProductForm />
+        <div className="product-form-card">
+          <ProductForm />
+        </div>
       </Container>
     </ThemeProvider>
   );
 };
-
-export default AddProductPage;
+export default NewProductPage;

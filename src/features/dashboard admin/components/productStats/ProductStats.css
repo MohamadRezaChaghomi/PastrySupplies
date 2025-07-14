@@ -1,0 +1,54 @@
+.product-stats-grid {
+  direction: rtl;
+  justify-content: space-between;
+}
+
+.product-stat-card {
+  direction: rtl;
+  text-align: right;
+  padding: 16px;
+  cursor: default;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 0;
+  width: 350px;
+}
+
+.product-stat-card:hover {
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  transform: translateY(-6px);
+  z-index: 1;
+}
+
+.product-stat-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.product-stat-value {
+  font-size: 1.6rem;
+}
+
+.product-stat-description {
+  font-weight: 400;
+  color: #444;
+}
+
+.animated-fadein {
+  animation: fadein 0.8s ease forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

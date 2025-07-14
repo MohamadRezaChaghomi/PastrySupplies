@@ -1,10 +1,11 @@
-// src/pages/UserListPage.jsx
 import React from 'react';
-import { CssBaseline, Container, Typography, Stack } from '@mui/material';
-import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import { CssBaseline, Container, Typography, Card, CardContent, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import pinkTheme from '../../../../themes/pinkTheme';
 import VirtualizedTable from '../../components/table/Table';
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+
+import './UserLists.css';
 
 const userColumns = [
   { id: 'name', label: 'نام', minWidth: 150 },
@@ -29,13 +30,18 @@ const UserListPage = () => {
     <ThemeProvider theme={pinkTheme}>
       <CssBaseline />
       <Container maxWidth="md" sx={{ mt: 6, direction: 'rtl' }}>
-        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1} sx={{ mb: 2 }}>
-          <Typography variant="h4" color="primary">
-            لیست کاربران
+        <Box className="user-list-title">
+          <PermIdentityIcon className="user-icon" fontSize="large" sx={{ mr: 1, color: 'primary.main' }}/>
+          <Typography variant="h4" component="h1" className="user-title-text" >
+           کاربران
           </Typography>
-          <PermIdentityIcon color="primary" fontSize="large" />
-        </Stack>
-        <VirtualizedTable columns={userColumns} data={users} height={500} />
+        </Box>
+
+        <Card className="user-table-card animated-fadein" >
+          <CardContent>
+            <VirtualizedTable columns={userColumns} data={users} height={500} />
+          </CardContent>
+        </Card>
       </Container>
     </ThemeProvider>
   );

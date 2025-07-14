@@ -1,10 +1,11 @@
-// src/pages/CategoryListPage.jsx
 import React from 'react';
-import { CssBaseline, Container, Typography, Stack } from '@mui/material';
-import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import { CssBaseline, Container, Typography, Card, CardContent, Box } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
 import pinkTheme from '../../../../themes/pinkTheme';
 import VirtualizedTable from '../../components/table/Table';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+
+import './Category.css';
 
 const categoryColumns = [
   { id: 'name', label: 'نام دسته‌بندی', minWidth: 200 },
@@ -15,7 +16,6 @@ const categories = [
   { id: 1, name: 'کیک و شیرینی', description: 'انواع کیک و شیرینی خانگی' },
   { id: 2, name: 'نوشیدنی‌ها', description: 'آبمیوه و نوشیدنی‌های سرد و گرم' },
   { id: 3, name: 'شکلات و آبنبات', description: 'انواع شکلات‌ها و آبنبات‌ها' },
-  // میتونی بیشتر اضافه کنی
 ];
 
 const CategoryListPage = () => {
@@ -23,13 +23,18 @@ const CategoryListPage = () => {
     <ThemeProvider theme={pinkTheme}>
       <CssBaseline />
       <Container maxWidth="md" sx={{ mt: 6, direction: 'rtl' }}>
-        <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1} sx={{ mb: 2 }}>
-          <Typography variant="h4" color="primary">
+        <Box className="category-list-title">
+          <CategoryOutlinedIcon className="category-icon" />
+          <Typography variant="h4" component="h1" className="category-title-text">
             دسته‌بندی‌ها
           </Typography>
-          <CategoryOutlinedIcon color="primary" fontSize="large" />
-        </Stack>
-        <VirtualizedTable columns={categoryColumns} data={categories} height={400} />
+        </Box>
+
+        <Card className="category-table-card animated-fadein">
+          <CardContent>
+            <VirtualizedTable columns={categoryColumns} data={categories} height={400} />
+          </CardContent>
+        </Card>
       </Container>
     </ThemeProvider>
   );

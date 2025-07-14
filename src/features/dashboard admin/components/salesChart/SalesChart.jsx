@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import './SalesChart.css';
 
 const data = [
   { name: 'فروردین', فروش: 4000 },
@@ -12,11 +13,11 @@ const data = [
 
 const SalesChart = () => {
   return (
-    <Card>
+    <Card className="sales-chart-card animated-card">
       <CardContent>
-        <Typography variant="h6" gutterBottom>نمودار فروش ماهانه</Typography>
+        <Typography className="sales-chart-title">نمودار فروش ماهانه</Typography>
         <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={data}>
+          <LineChart data={data} margin={{ left: 20, right: 0 }}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" reversed />
             <YAxis />

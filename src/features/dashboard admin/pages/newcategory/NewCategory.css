@@ -1,0 +1,66 @@
+.new-category-title {
+  direction: rtl;
+  display: flex;
+  margin-bottom: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start !important;
+  animation: fadeInDown 0.8s ease;
+}
+
+.muirtl-1dksopf-MuiStack-root {
+    direction: rtl;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start !important;
+}
+
+.new-category-icon {
+  color: #e91e63;
+  font-size: 2.5rem !important;
+  margin-left: 8px !important;
+}
+
+/* عنوان داخل فرم */
+.new-category-title-text {
+  color: #e91e63;
+  font-family: 'Estedad', Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+/* کارت فرم */
+.category-form-card {
+  direction: rtl;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 24px;
+  animation: fadein 0.8s ease forwards;
+  margin-top: 12px;
+}
+
+.category-form-card:hover {
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+  transform: translateY(-6px);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,23 @@
+.sales-chart-card {
+  direction: rtl;
+  text-align: right;
+  cursor: default;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  padding: 16px;
+}
+
+.sales-chart-card:hover {
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  transform: translateY(-6px);
+}
+
+.sales-chart-title {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 16px !important;
+  cursor: default;
+  color: #e91e63;
+  font-family: 'Estedad', Tahoma, sans-serif;
+  font-weight: bolder !important;
+
+}

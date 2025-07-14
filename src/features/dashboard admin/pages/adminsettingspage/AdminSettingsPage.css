@@ -1,38 +1,40 @@
-.new-product-title {
+.admin-settings-title {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
   animation: fadeInDown 0.8s ease;
-  direction: rtl !important;
-  justify-content: flex-start !important;
+  direction: rtl;
 }
 
-.new-product-icon {
+.settings-icon {
   color: #e91e63;
-  font-size: 2.5rem !important;
-  margin-left: 8px !important;
+  font-size: 2.5rem;
+  margin-left: 8px;
 }
 
-.new-product-title-text {
+.settings-title-text {
   color: #e91e63;
   font-family: 'Estedad', Tahoma, sans-serif;
   font-weight: 600;
   font-size: 2rem;
 }
 
-.product-form-card {
+.settings-card {
   direction: rtl;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  padding: 24px;
-  animation: fadein 0.8s ease forwards;
+  overflow: hidden;
 }
 
-.product-form-card:hover {
+.settings-card:hover {
   box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
   transform: translateY(-6px);
+}
+
+.animated-fadein {
+  animation: fadein 0.8s ease forwards;
 }
 
 @keyframes fadeInDown {

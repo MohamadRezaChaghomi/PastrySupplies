@@ -1,0 +1,48 @@
+.category-stats-card {
+  direction: rtl;
+  text-align: right;
+  padding: 16px;
+  cursor: default;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.category-stats-card:hover {
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.3);
+  transform: translateY(-6px);
+  z-index: 1;
+}
+
+.category-stats-title {
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  cursor: default;
+}
+
+.category-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  direction: rtl;
+  text-align: right;
+}
+
+.category-list-item {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 0;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.category-list-item:last-child {
+  border-bottom: none;
+}
+
+.category-list-item:hover {
+  background-color: #fce4ec;
+}

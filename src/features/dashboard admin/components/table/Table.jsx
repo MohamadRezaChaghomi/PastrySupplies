@@ -1,3 +1,4 @@
+// src/components/table/Table.jsx
 import React from 'react';
 import { Paper, Typography, useTheme } from '@mui/material';
 import { TableVirtuoso } from 'react-virtuoso';
@@ -6,7 +7,6 @@ import './Table.css';
 const VirtualizedTable = ({ columns, data, height = 400 }) => {
   const theme = useTheme();
 
-  // تعریف متغیرهای CSS پویا برای رنگ‌ها از تم
   React.useEffect(() => {
     document.documentElement.style.setProperty('--primary-main', theme.palette.primary.main);
     document.documentElement.style.setProperty('--primary-light', theme.palette.primary.light);
@@ -14,11 +14,7 @@ const VirtualizedTable = ({ columns, data, height = 400 }) => {
   }, [theme]);
 
   return (
-    <Paper
-      className="virtualizedTable"
-      style={{ height }}
-      elevation={3}
-    >
+    <div className="virtualizedTable" style={{ height }}>
       <TableVirtuoso
         data={data}
         style={{ height, width: '100%' }}
@@ -44,12 +40,10 @@ const VirtualizedTable = ({ columns, data, height = 400 }) => {
           </tr>
         )}
         itemContent={(index, row) =>
-          columns.map((column) => (
-            <td key={column.id}>{row[column.id]}</td>
-          ))
+          columns.map((column) => <td key={column.id}>{row[column.id]}</td>)
         }
       />
-    </Paper>
+    </div>
   );
 };
 

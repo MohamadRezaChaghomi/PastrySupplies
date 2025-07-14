@@ -1,0 +1,11 @@
+.product-title {
+  direction: rtl;
+  margin: 0;
+  margin-bottom: 16px;
+  font-family: 'Estedad Regular', Estedad, Tahoma, sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #e91e63;
+  text-align: right;
+}

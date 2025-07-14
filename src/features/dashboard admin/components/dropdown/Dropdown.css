@@ -2,6 +2,15 @@
   width: 100%;
   position: relative;
 }
+.dropdownItem {
+  text-decoration: none !important;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus,
+.dropdownItem.active {
+  text-decoration: none !important;
+}
 
 .dropdownToggle {
   display: flex;
