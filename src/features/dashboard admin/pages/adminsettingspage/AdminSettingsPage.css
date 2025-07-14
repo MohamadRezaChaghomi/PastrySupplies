@@ -4,6 +4,7 @@
   margin-bottom: 24px;
   animation: fadeInDown 0.8s ease;
   direction: rtl;
+  justify-content: flex-start !important;
 }
 
 .settings-icon {

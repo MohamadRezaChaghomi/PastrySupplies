@@ -1,10 +1,10 @@
-// src/components/settings/SiteGlobalSettings.jsx
 import React, { useState } from 'react';
 import { TextField, Button, Stack } from '@mui/material';
+import './SiteGlobalSettings.css';
 
 const SiteGlobalSettings = () => {
   const [siteInfo, setSiteInfo] = useState({
-    footer: '© همه حقوق محفوظ است.',
+    footer: '',
     logoUrl: '',
   });
 
@@ -13,13 +13,12 @@ const SiteGlobalSettings = () => {
   };
 
   const handleSubmit = () => {
-    // ارسال به سرور
     alert('تنظیمات سایت ذخیره شد!');
   };
 
   return (
     <>
-      <h3 style={{ color: '#e91e63', marginBottom: '16px' }}>تنظیمات کلی سایت</h3>
+      <h3 className="site-global-title">تنظیمات کلی سایت</h3>
       <Stack spacing={2}>
         <TextField
           label="آدرس لوگو (URL)"

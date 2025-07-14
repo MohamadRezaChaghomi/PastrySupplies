@@ -1,11 +1,11 @@
-// src/components/settings/AdminProfileSettings.jsx
 import React, { useState } from 'react';
 import { TextField, Button, Stack } from '@mui/material';
+import './AdminProfileSettings.css';
 
 const AdminProfileSettings = () => {
   const [profile, setProfile] = useState({
-    name: 'ادمین سایت',
-    email: 'admin@example.com',
+    name: '',
+    email: '',
   });
 
   const handleChange = (e) => {
@@ -13,13 +13,12 @@ const AdminProfileSettings = () => {
   };
 
   const handleSubmit = () => {
-    // ارسال داده به سرور
     alert('اطلاعات ادمین ذخیره شد!');
   };
 
   return (
     <>
-      <h3 style={{ color: '#e91e63', marginBottom: '16px' , direction: 'rtl' }}>مشخصات ادمین</h3>
+      <h3 className="admin-profile-title">مشخصات ادمین</h3>
       <Stack spacing={2}>
         <TextField
           label="نام"

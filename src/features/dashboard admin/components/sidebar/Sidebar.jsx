@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import CakeOutlinedIcon from "@mui/icons-material/CakeOutlined";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import Dropdown from "../dropdown/Dropdown";
 import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
@@ -41,7 +41,7 @@ export default function Sidebar() {
         <ul className="sidebarList">
           <Link to="/messages" className="link">
             <li className={`sidebarListItem ${location.pathname === "/messages" ? "active" : ""}`}>
-              <MailOutlineIcon className="sidebarIcon" />
+              <ChatBubbleOutlineIcon className="sidebarIcon" />
               <span className="itemLabel">پیام‌ها</span>
             </li>
           </Link>

@@ -1,0 +1,101 @@
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.messages-header {
+  margin-bottom: 24px;
+}
+
+.messages-icon {
+  color: #e91e63;
+  margin-left: 8px;
+  opacity: 0;
+  animation: fadeInDown 0.6s ease forwards;
+  animation-delay: 0s;
+}
+
+.messages-title-text {
+  font-weight: bold;
+  color: #e91e63;
+  opacity: 0;
+  animation: fadeInDown 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.messages-header {
+  margin-bottom: 24px;
+}
+
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message-card {
+  direction: rtl;
+  text-align: right;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+
+  /* انیمیشن ورود */
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+.message-card:hover {
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.2);
+  transform: translateY(-4px);
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.message-date {
+  font-weight: normal;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.message-subject {
+  color: #e91e63;
+  margin-bottom: 6px;
+}
+
+.message-preview {
+  color: #444;
+}

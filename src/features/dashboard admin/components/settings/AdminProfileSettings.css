@@ -1,0 +1,9 @@
+.admin-profile-title {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 16px !important;
+  cursor: default;
+  color: #e91e63;
+  font-family: 'Estedad', Tahoma, sans-serif;
+  animation: fadeInDown 0.6s ease;
+}

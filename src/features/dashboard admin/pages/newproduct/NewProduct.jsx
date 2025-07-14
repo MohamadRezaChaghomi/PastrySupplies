@@ -26,7 +26,7 @@ const NewProductPage = () => {
         >
           <AddCircleOutlineOutlinedIcon className="new-product-icon" />
           <Typography className="new-product-title-text" variant="h4" component="h1">
-            ایجاد محصول جدید
+            ایجاد محصول
           </Typography>
         </Stack>
         <div className="product-form-card">
