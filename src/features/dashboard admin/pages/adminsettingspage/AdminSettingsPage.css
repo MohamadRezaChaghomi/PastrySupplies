@@ -5,6 +5,10 @@
   animation: fadeInDown 0.8s ease;
   direction: rtl;
   justify-content: flex-start !important;
+  font-family: 'Estedad Regular' !important;
+  font-weight: 400 !important;
+  font-size: 2.125rem !important;
+  line-height: 1.235 !important;
 }
 
 .settings-icon {

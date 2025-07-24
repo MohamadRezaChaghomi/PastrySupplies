@@ -1,12 +1,14 @@
 import React from "react";
+import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CustomBadge from "../badge/Badge";
 import "./NavBarAdmin.css";
+import AuthModal from '../AuthModal/AuthModal'; 
 
-export default function Topbar() {
+export default function Topbar({ onAuthClick }) {
   const navigate = useNavigate();
 
   const unreadMessages = 3;
@@ -23,7 +25,7 @@ export default function Topbar() {
 
           <div
             className="topbarIconContainer"
-            onClick={() => navigate("/analytics")}
+            onClick={() => navigate("/reportspage")}
             title="سفارش‌های جدید"
           >
             <CustomBadge count={newOrders}>
@@ -47,6 +49,16 @@ export default function Topbar() {
             title="پروفایل"
           >
             <AccountCircleOutlinedIcon className="iconPink" />
+          </div>
+
+          <div className="topbarIconContainer">
+            <Button
+              variant="outlined"
+              size="small"
+              onClick={onAuthClick}
+            >
+              ورود / ثبت‌نام
+            </Button>
           </div>
 
         </div>

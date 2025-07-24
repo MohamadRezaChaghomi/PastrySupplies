@@ -1,8 +1,9 @@
 // src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import NavbarAdmin from './features/dashboard admin/components/navbaradmin/NavBarAdmin';
 import Sidebar from './features/dashboard admin/components/sidebar/Sidebar';
 import AppRoutes from './routes/AppRoutes';
+import AuthModal from './features/dashboard admin/components/AuthModal/AuthModal';
 import './App.css';
 
 // افزودن موارد مربوط به MUI Theme و RTL
@@ -25,11 +26,15 @@ const rtlTheme = createTheme({
 });
 
 export default function App() {
+  const [authOpen, setAuthOpen] = useState(false); // ✅ اضافه شد
+
   return (
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={rtlTheme}>
         <CssBaseline />
-        <NavbarAdmin />
+        <NavbarAdmin onAuthClick={() => setAuthOpen(true)} /> {/* ✅ کنترل باز شدن */}
+        <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} /> {/* ✅ کنترل بستن */}
+        
         <div className="mainLayout" dir="rtl">
           <Sidebar />
           <div className="mainContent">

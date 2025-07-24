@@ -6,7 +6,7 @@ import {
   Stack,
   ThemeProvider,
 } from '@mui/material';
-import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import pinkTheme from '../../../../themes/pinkTheme';
 import CategoryForm from '../../components/addcategory/AddCategory';
 import './NewCategory.css'; // اضافه کردن استایل
@@ -22,7 +22,7 @@ const NewCategoryPage = () => {
         justifyContent="flex-end"
         className="new-category-title"
       >
-        <CategoryOutlinedIcon className="new-category-icon" />
+        <AddCircleOutlineOutlinedIcon className="new-category-icon" />
         <Typography className="new-category-title-text" variant="h4" component="h1">
           ایجاد دسته‌بندی 
         </Typography>
