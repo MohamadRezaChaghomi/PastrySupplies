@@ -210,7 +210,7 @@ const categories = [
 ];
 
 export default function MegaMenu({ show }) {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(0);
 
   return (
     <div className={`mega-menu-container ${show ? "show" : ""}`}>
@@ -219,36 +219,34 @@ export default function MegaMenu({ show }) {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="category-item"
+              className={`category-item ${
+                hoveredIndex === index ? "active" : ""
+              }`}
               onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
             >
               <span className="category-label">
                 {category.title}
                 <KeyboardArrowLeftIcon />
               </span>
+            </div>
+          ))}
+        </div>
 
-              {hoveredIndex === index && (
-                <div className="sub-menu two-level">
-                  {category.subItems.map((section, secIdx) => (
-                    <div key={secIdx} className="sub-section">
-                      <div className="sub-section-title">
-                        <span>
-                          <span style={{ marginLeft: "6px", color: "#FF7CA8" }}>
-                            |
-                          </span>
-                          {section.title}
-                        </span>
-                      </div>
-                      {section.items.map((item, itemIdx) => (
-                        <div key={itemIdx} className="sub-item">
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-                  ))}
+        {/* زیرمنو ثابت که فقط محتوا تغییر می‌کند */}
+        <div className="sub-menu two-level">
+          {categories[hoveredIndex]?.subItems.map((section, secIdx) => (
+            <div key={secIdx} className="sub-section">
+              <div className="sub-section-title">
+                <span>
+                  <span style={{ marginLeft: "6px", color: "#FF7CA8" }}>|</span>
+                  {section.title}
+                </span>
+              </div>
+              {section.items.map((item, itemIdx) => (
+                <div key={itemIdx} className="sub-item">
+                  {item}
                 </div>
-              )}
+              ))}
             </div>
           ))}
         </div>

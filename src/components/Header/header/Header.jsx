@@ -5,7 +5,7 @@ import LoginTwoToneIcon from "@mui/icons-material/LoginTwoTone";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Header.css";
-import MegaMenu from "./MegaMenu"; // مسیر را طبق پروژه‌ات تنظیم کن
+import MegaMenu from "../megaMenu/MegaMenu";
 
 export default function Header() {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
