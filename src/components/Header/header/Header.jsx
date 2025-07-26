@@ -18,10 +18,16 @@ export default function Header() {
           className="justify-content-between"
           style={{ gap: 30 }}
         >
-          <Navbar.Brand className="logo m-0 p-0" style={{ color: "#FF7CA8"}}>شادی لند</Navbar.Brand>
+          <Navbar.Brand className="logo m-0 p-0" style={{ color: "#FF7CA8" }}>
+            شادی لند
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="main-navbar" />
 
-          <Navbar.Collapse id="main-navbar" className="justify-content-between" style={{ gap:30 }}>
+          <Navbar.Collapse
+            id="main-navbar"
+            className="justify-content-between"
+            style={{ gap: 30 }}
+          >
             <Nav className="me-auto nav-font align-self-end" dir="rtl">
               <div className="d-flex" style={{ gap: 6 }}>
                 <Nav.Link href="/">خانه</Nav.Link>
@@ -39,9 +45,7 @@ export default function Header() {
               </div>
             </Nav>
 
-            <Form
-              className="search-container"
-            >
+            <Form className="search-container">
               <div className="search-box-wrapper">
                 <SearchIcon className="search-icon" />
                 <Form.Control

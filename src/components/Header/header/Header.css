@@ -18,7 +18,7 @@
   font-family: Estedad Medium;
 }
 
-.search-container{
+.search-container {
   flex: 1;
   max-width: 650px;
 }
@@ -34,7 +34,7 @@
   height: 44px;
   border-radius: 10px;
   padding-right: 2.5rem;
-  font-family: 'Estedad Light', sans-serif;
+  font-family: "Estedad Light", sans-serif;
   font-size: 14px;
   border: none;
   outline: none;
@@ -55,27 +55,44 @@
   pointer-events: none;
 }
 
-.login-register-btn{
-    border-radius: 10px;
-    font-family: Estedad Medium;
-    background-color: #FF7CA8;
-    border: 3px solid #6E3E3E;
-    gap: 8px;
+.login-register-btn {
+  border-radius: 10px;
+  font-family: Estedad Medium;
+  background-color: #ff7ca8;
+  border: 3px solid #6e3e3e;
+  gap: 8px;
 }
 
-.login-register-btn:hover{
-    background-color: #eb6692;
-    border: 3px solid #5e2f2f;
-
+.login-register-btn:hover {
+  background-color: #eb6692;
+  border: 3px solid #5e2f2f;
 }
 
-.cart-btn{
-    background-color: transparent;
-    border: none;
-    color: #444444;
+
+.cart-btn {
+  background-color: transparent;
+  border: none;
+  color: #444444;
 }
 
-.cart-btn:hover{
-    background-color: transparent;
-    color: #444444;
+.cart-btn:hover {
+  background-color: transparent;
+  color: #444444;
+}
+
+.login-register-btn:focus,
+.login-register-btn:active {
+  background-color:rgb(234, 81, 132) !important;
+  border: 3px solid #5e2f2f;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.cart-btn:focus,
+.cart-btn:active {
+  background-color: transparent !important;
+  color: #444444;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
