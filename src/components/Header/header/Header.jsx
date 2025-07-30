@@ -27,7 +27,35 @@ export default function Header() {
   return (
     <>
       <Navbar className="pt-0 pb-0 navbar position-relative" dir="rtl">
-        <Container fluid className="mx-4 gap-4">
+        <Container
+          fluid
+          className="mx-4 d-lg-none d-flex justify-content-between align-items-center"
+        >
+          {/* آیکن همبرگر - راست */}
+          <div onClick={handleShow} style={{ cursor: "pointer" }}>
+            <MenuIcon fontSize="large" />
+          </div>
+
+          {/* لوگو - وسط */}
+          <Navbar.Brand className="m-0 p-0 text-center flex-grow-1">
+            <span className="logo-header" style={{ color: "#FF7CA8" }}>
+              شادی لند
+            </span>
+          </Navbar.Brand>
+
+          {/* آیکن سبد خرید - چپ */}
+          <div>
+            <button className="position-relative cart-btn">
+              <ShoppingCartIcon fontSize="large" />
+            </button>
+          </div>
+        </Container>
+
+        {/* آیتم‌های دسکتاپ */}
+        <Container
+          fluid
+          className="mx-4 d-none d-lg-flex justify-content-between align-items-center gap-4"
+        >
           {/* لوگو */}
           <Navbar.Brand className="m-0 p-0">
             <span className="logo-header" style={{ color: "#FF7CA8" }}>
@@ -35,14 +63,9 @@ export default function Header() {
             </span>
           </Navbar.Brand>
 
-          {/* آیکن منو همبرگری در موبایل */}
-          <Button variant="light" className="d-lg-none" onClick={handleShow}>
-            <MenuIcon fontSize="large" />
-          </Button>
-
-          {/* آیتم‌های دسکتاپ */}
+          {/* ناوبری دسکتاپ */}
           <Nav
-            className="nav-font d-none d-lg-flex align-items-end"
+            className="nav-font d-flex align-items-end"
             style={{ gap: 15, height: 55 }}
           >
             <Nav.Link href="/">خانه</Nav.Link>
@@ -71,10 +94,7 @@ export default function Header() {
           </Form>
 
           {/* دکمه‌ها در دسکتاپ */}
-          <div
-            className="d-none d-lg-flex align-items-center"
-            style={{ gap: 20 }}
-          >
+          <div className="d-flex align-items-center" style={{ gap: 20 }}>
             <button className="login-register-btn d-flex align-items-center">
               <LoginTwoToneIcon className="me-1" />
               ورود | ثبت‌نام
@@ -114,13 +134,15 @@ export default function Header() {
               ></input>
             </div>
           </Form>
-          <Nav className="flex-column mt-2 categories-mobile" style={{ gap: 3 }}>
+          <Nav
+            className="flex-column mt-2 categories-mobile"
+            style={{ gap: 3 }}
+          >
             <Nav.Link href="/">خانه</Nav.Link>
             <MobileMenu />
             <Nav.Link href="/about">درباره ما</Nav.Link>
             <Nav.Link href="/contact">تماس با ما</Nav.Link>
           </Nav>
-
         </Offcanvas.Body>
       </Offcanvas>
     </>
