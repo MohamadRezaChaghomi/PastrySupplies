@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5aed934b.css",
+    "main.js": "/static/js/main.6b8bbc45.js",
+    "static/media/Estedad-SemiBold.ttf": "/static/media/Estedad-SemiBold.00a13ed5320fb2847ca5.ttf",
+    "static/media/Estedad-Light.ttf": "/static/media/Estedad-Light.4f660c364be891faa626.ttf",
+    "static/media/Estedad-Medium.ttf": "/static/media/Estedad-Medium.86f62bf2a770ccb7e20b.ttf",
+    "static/media/Estedad-Regular.ttf": "/static/media/Estedad-Regular.bf51f6583b68a91b5726.ttf",
+    "static/media/Estedad-Bold.ttf": "/static/media/Estedad-Bold.3716fd2fb46ed2acaccb.ttf",
+    "static/media/DimaFantasy.ttf": "/static/media/DimaFantasy.127f8b04eec9368103ae.ttf",
+    "index.html": "/index.html",
+    "main.5aed934b.css.map": "/static/css/main.5aed934b.css.map",
+    "main.6b8bbc45.js.map": "/static/js/main.6b8bbc45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5aed934b.css",
+    "static/js/main.6b8bbc45.js"
+  ]
+}

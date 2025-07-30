@@ -1,75 +1,128 @@
 import React, { useState } from "react";
-import { Container, Navbar, Nav, Button, Form } from "react-bootstrap";
+import {
+  Container,
+  Navbar,
+  Nav,
+  Button,
+  Form,
+  Offcanvas,
+} from "react-bootstrap";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LoginTwoToneIcon from "@mui/icons-material/LoginTwoTone";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import "./Header.css";
 import MegaMenu from "../megaMenu/MegaMenu";
+import MobileMenu from "../mobileMenu/MobileMenu";
 
 export default function Header() {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
 
   return (
     <>
-      <Navbar expand="lg" className="pt-0 pb-0 navbar position-relative">
-        <Container
-          fluid
-          className="justify-content-between"
-          style={{ gap: 30 }}
-        >
-          <Navbar.Brand className="logo m-0 p-0" style={{ color: "#FF7CA8" }}>
-            شادی لند
+      <Navbar className="pt-0 pb-0 navbar position-relative" dir="rtl">
+        <Container fluid className="mx-4 gap-4">
+          {/* لوگو */}
+          <Navbar.Brand className="m-0 p-0">
+            <span className="logo-header" style={{ color: "#FF7CA8" }}>
+              شادی لند
+            </span>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="main-navbar" />
 
-          <Navbar.Collapse
-            id="main-navbar"
-            className="justify-content-between"
-            style={{ gap: 30 }}
+          {/* آیکن منو همبرگری در موبایل */}
+          <Button variant="light" className="d-lg-none" onClick={handleShow}>
+            <MenuIcon fontSize="large" />
+          </Button>
+
+          {/* آیتم‌های دسکتاپ */}
+          <Nav
+            className="nav-font d-none d-lg-flex align-items-end"
+            style={{ gap: 15, height: 55 }}
           >
-            <Nav className="me-auto nav-font align-self-end" dir="rtl">
-              <div className="d-flex" style={{ gap: 6 }}>
-                <Nav.Link href="/">خانه</Nav.Link>
-                {/* دسته‌بندی با مگا منو */}
-                <Nav.Link
-                  onMouseEnter={() => setShowMegaMenu(true)}
-                  onMouseLeave={() => setShowMegaMenu(false)}
-                  style={{ position: "relative" }}
-                >
-                  محصولات <KeyboardArrowDownIcon />
-                  <MegaMenu show={showMegaMenu} />
-                </Nav.Link>
-                <Nav.Link href="/about">درباره ما</Nav.Link>
-                <Nav.Link href="/contact">تماس با ما</Nav.Link>
-              </div>
-            </Nav>
+            <Nav.Link href="/">خانه</Nav.Link>
+            <Nav.Link
+              onMouseEnter={() => setShowMegaMenu(true)}
+              onMouseLeave={() => setShowMegaMenu(false)}
+              style={{ position: "relative" }}
+            >
+              محصولات <KeyboardArrowDownIcon sx={{ fontSize: 20 }} />
+              <MegaMenu show={showMegaMenu} />
+            </Nav.Link>
+            <Nav.Link href="/about">درباره ما</Nav.Link>
+            <Nav.Link href="/contact">تماس با ما</Nav.Link>
+          </Nav>
 
-            <Form className="search-container">
-              <div className="search-box-wrapper">
-                <SearchIcon className="search-icon" />
-                <Form.Control
-                  type="search"
-                  placeholder="جستجوی محصولات..."
-                  className="search-box"
-                  aria-label="Search"
-                />
-              </div>
-            </Form>
-
-            <div className="d-flex align-items-center" style={{ gap: 15 }}>
-              <Button className="d-flex align-items-center text-white login-register-btn">
-                <LoginTwoToneIcon />
-                ورود | ثبت‌نام
-              </Button>
-
-              <Button variant="light" className="position-relative cart-btn">
-                <ShoppingCartIcon fontSize="large" />
-              </Button>
+          {/* فرم جستجو در دسکتاپ */}
+          <Form className="search-container d-none d-lg-block">
+            <div className="search-box-wrapper">
+              <SearchIcon className="search-icon" />
+              <input
+                type="search"
+                placeholder="جستجوی محصولات..."
+                className="search-control"
+              ></input>
             </div>
-          </Navbar.Collapse>
+          </Form>
+
+          {/* دکمه‌ها در دسکتاپ */}
+          <div
+            className="d-none d-lg-flex align-items-center"
+            style={{ gap: 20 }}
+          >
+            <button className="login-register-btn d-flex align-items-center">
+              <LoginTwoToneIcon className="me-1" />
+              ورود | ثبت‌نام
+            </button>
+
+            <button className="position-relative cart-btn">
+              <ShoppingCartIcon fontSize="large" />
+            </button>
+          </div>
         </Container>
       </Navbar>
+
+      {/* Offcanvas موبایل */}
+      <Offcanvas
+        show={showOffcanvas}
+        onHide={handleClose}
+        placement="end"
+        backdrop={true} // اختیاری چون پیش‌فرض فعاله
+        scroll={false} // باعث میشه بقیه صفحه اسکرول نشه
+        dir="rtl"
+        style={{ width: 320 }}
+      >
+        <Offcanvas.Header className="p-0">
+          <button className="login-register-mobile-btn d-flex align-items-center justify-content-center">
+            ورود | ثبت‌نام
+          </button>
+        </Offcanvas.Header>
+
+        <Offcanvas.Body>
+          <Form className="search-container">
+            <div className="search-box-wrapper">
+              <SearchIcon className="search-icon" />
+              <input
+                type="search"
+                placeholder="جستجوی محصولات..."
+                className="search-control"
+              ></input>
+            </div>
+          </Form>
+          <Nav className="flex-column mt-2 categories-mobile" style={{ gap: 3 }}>
+            <Nav.Link href="/">خانه</Nav.Link>
+            <MobileMenu />
+            <Nav.Link href="/about">درباره ما</Nav.Link>
+            <Nav.Link href="/contact">تماس با ما</Nav.Link>
+          </Nav>
+
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 }
