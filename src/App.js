@@ -6,6 +6,7 @@ import AppRoutes from "./routes/AppRoutes";
 import AuthModal from "./features/dashboard admin/components/AuthModal/AuthModal";
 import Footer from "./components/Footer/Footer/Footer";
 import Header from "./components/Header/header/Header";
+import InfoNotice from "./components/Info-notice/InfoNotice";
 import "./App.css";
 
 // افزودن موارد مربوط به MUI Theme و RTL
@@ -32,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <Footer />
+      <InfoNotice />
     </>
   );
 }
