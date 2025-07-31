@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <InfoNotice />
+      <Footer />
     </>
   );
 }
