@@ -4,7 +4,7 @@ import NavbarAdmin from "./features/dashboard admin/components/navbaradmin/NavBa
 import Sidebar from "./features/dashboard admin/components/sidebar/Sidebar";
 import AppRoutes from "./routes/AppRoutes";
 import AuthModal from "./features/dashboard admin/components/AuthModal/AuthModal";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer/Footer";
 import Header from "./components/Header/header/Header";
 import "./App.css";
 
@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <>
-      <Header />
+      <Footer />
     </>
   );
 }
