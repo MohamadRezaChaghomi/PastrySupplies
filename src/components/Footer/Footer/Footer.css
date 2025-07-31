@@ -30,3 +30,11 @@
   justify-content: center;
   align-items: baseline;
 }
+@media (max-width: 576px) {
+  .text-copy-right {
+    font-size: 12px;
+  }
+  .footer-support {
+    font-size: 12px;
+  }
+}

@@ -18,7 +18,7 @@ const Footer = () => {
                 تلفن پشتیبانی: 09195641969 | 7 روز هفته پاسخگوی شما هستیم.
               </p>
             </div>
-            <div className="d-flex align-items-center justify-content-evenly">
+            <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
               <QuickLinks />
               <SocialAndEmail />
             </div>
@@ -28,8 +28,8 @@ const Footer = () => {
           </div>
           <div className="footer-bottom">
             <p className="text-copy-right">
-              کپی رایت © 2020 فروشگاه اینترنتی <p style={{ fontFamily: "DimaFantesy", fontSize: 30}}>&nbsp;&nbsp;شادی لند</p>. تمامی
-              حقوق محفوظ می‌باشد.
+              کپی رایت © 2020 فروشگاه اینترنتی شادی لند . تمامی حقوق محفوظ
+              می‌باشد.
             </p>
           </div>
         </footer>
