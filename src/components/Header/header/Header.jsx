@@ -16,13 +16,17 @@ import CloseIcon from "@mui/icons-material/Close";
 import "./Header.css";
 import MegaMenu from "../megaMenu/MegaMenu";
 import MobileMenu from "../mobileMenu/MobileMenu";
+import AuthModal from '../../AuthModal/AuthModal';
 
 export default function Header() {
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const handleClose = () => setShowOffcanvas(false);
   const handleShow = () => setShowOffcanvas(true);
+  const handleOpenAuthModal = () => setShowAuthModal(true);
+  const handleCloseAuthModal = () => setShowAuthModal(false);
 
   return (
     <>
@@ -95,7 +99,7 @@ export default function Header() {
 
           {/* دکمه‌ها در دسکتاپ */}
           <div className="d-flex align-items-center" style={{ gap: 20 }}>
-            <button className="login-register-btn d-flex align-items-center">
+            <button onClick={handleOpenAuthModal} className="login-register-btn d-flex align-items-center">
               <LoginTwoToneIcon className="me-1" />
               ورود | ثبت‌نام
             </button>
@@ -118,7 +122,7 @@ export default function Header() {
         style={{ width: 320 }}
       >
         <Offcanvas.Header className="p-0">
-          <button className="login-register-mobile-btn d-flex align-items-center justify-content-center">
+          <button onClick={handleOpenAuthModal} className="login-register-mobile-btn d-flex align-items-center justify-content-center">
             ورود | ثبت‌نام
           </button>
         </Offcanvas.Header>
@@ -145,6 +149,7 @@ export default function Header() {
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
+      <AuthModal open={showAuthModal} onClose={handleCloseAuthModal} />
     </>
   );
 }
