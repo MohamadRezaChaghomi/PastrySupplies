@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import CustomBadge from "../badge/Badge";
 import "./NavBarAdmin.css";
-import AuthModal from '../AuthModal/AuthModal'; 
+import AuthModal from '../../../../components/AuthModal/AuthModal'; 
 
 export default function Topbar({ onAuthClick }) {
   const navigate = useNavigate();

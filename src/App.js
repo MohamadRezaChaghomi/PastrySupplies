@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import NavbarAdmin from "./features/dashboard admin/components/navbaradmin/NavBarAdmin";
 import Sidebar from "./features/dashboard admin/components/sidebar/Sidebar";
 import AppRoutes from "./routes/AppRoutes";
-import AuthModal from "./features/dashboard admin/components/AuthModal/AuthModal";
+import AuthModal from "../src/components/AuthModal/AuthModal";
 import Footer from "./components/Footer/Footer/Footer";
 import Header from "./components/Header/header/Header";
 import InfoNotice from "./components/Info-notice/InfoNotice";
+
 import "./App.css";
 
 // افزودن موارد مربوط به MUI Theme و RTL
@@ -32,8 +33,8 @@ export default function App() {
   const [authOpen, setAuthOpen] = useState(false); // ✅ اضافه شد
 
   return (
-    <>
-      <Footer />
-    </>
+    <ThemeProvider theme={pinkTheme}>
+      <Header />
+    </ThemeProvider>
   );
 }
