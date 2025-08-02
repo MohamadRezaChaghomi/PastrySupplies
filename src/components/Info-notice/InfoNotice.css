@@ -1,0 +1,26 @@
+/* Features.css */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  font-family: Estedad Regular;
+}
+
+.feature-box {
+  text-align: center;
+  margin: 1rem;
+  width: 160px;
+}
+
+.feature-box img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.7rem;
+}
+
+.feature-box p {
+  font-size: 0.9rem;
+  color: #575757;
+}
