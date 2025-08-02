@@ -17,6 +17,7 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useAuth } from "../../context/AuthContext";
 import "./AuthModal.css";
 
 const AuthModal = ({ open, onClose }) => {
@@ -24,6 +25,7 @@ const AuthModal = ({ open, onClose }) => {
   const [rememberMe, setRememberMe] = useState(true);
   const [isAdminMode, setIsAdminMode] = useState(false);
   const [error, setError] = useState("");
+  const { login, register } = useAuth();
 
   const [formData, setFormData] = useState({
     first_name: "",
@@ -36,23 +38,39 @@ const AuthModal = ({ open, onClose }) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = () => {
-    if (isAdminMode) {
-      if (formData.mobile === "admin" && formData.password === "admin123") {
-        alert("ورود ادمین موفق!");
+  const handleSubmit = async () => {
+    try {
+      if (isAdminMode) {
+        if (formData.mobile === "admin" && formData.password === "admin123") {
+          alert("ورود ادمین موفق!");
+          setError("");
+          onClose();
+        } else {
+          setError("نام کاربری یا رمز عبور ادمین نادرست است.");
+        }
+      } else {
+        if (tab === 0) {
+          // Login
+          await login(formData.mobile, formData.password);
+          alert("ورود با موفقیت انجام شد!");
+        } else {
+          // Register
+          await register(
+            formData.first_name,
+            formData.last_name,
+            formData.mobile,
+            formData.password
+          );
+          alert("ثبت‌نام با موفقیت انجام شد!");
+        }
         setError("");
         onClose();
-      } else {
-        setError("نام کاربری یا رمز عبور ادمین نادرست است.");
       }
-    } else {
-      if (tab === 0) {
-        alert("ورود با موفقیت انجام شد!");
-      } else {
-        alert("ثبت‌نام با موفقیت انجام شد!");
-      }
-      setError("");
-      onClose();
+    } catch (err) {
+      console.error(err);
+      const message =
+        err?.response?.data?.message || "خطایی در ارتباط با سرور رخ داده است.";
+      setError(message);
     }
   };
 

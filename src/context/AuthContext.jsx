@@ -47,7 +47,6 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// هوک اختصاصی برای دسترسی ساده‌تر
 export const useAuth = () => {
   return useContext(AuthContext);
 };
