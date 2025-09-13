@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import pinkTheme from '../../../../themes/pinkTheme';
 import VirtualizedTable from '../../components/table/Table';
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import DashboardLayout from '../../components/dashboardLayout/DashboardLayout';
 
 import './UserLists.css';
 
@@ -29,20 +30,13 @@ const UserListPage = () => {
   return (
     <ThemeProvider theme={pinkTheme}>
       <CssBaseline />
-      <Container maxWidth="md" sx={{ mt: 6, direction: 'rtl' }}>
-        <Box className="user-list-title">
-          <PermIdentityIcon className="user-icon" fontSize="large" sx={{ mr: 1, color: 'primary.main' }}/>
-          <Typography variant="h4" component="h1" className="user-title-text" >
-           کاربران
-          </Typography>
-        </Box>
-
+      <DashboardLayout title="کاربران" icon={PermIdentityIcon}>
         <Card className="user-table-card animated-fadein" >
           <CardContent>
             <VirtualizedTable columns={userColumns} data={users} height={500} />
           </CardContent>
         </Card>
-      </Container>
+      </DashboardLayout>
     </ThemeProvider>
   );
 };

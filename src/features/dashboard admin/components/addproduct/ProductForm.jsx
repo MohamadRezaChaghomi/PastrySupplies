@@ -6,7 +6,7 @@ import {
   Box,
   Typography,
 } from '@mui/material';
-import './ProductForm.css'; // فایل CSS را ایمپورت کن
+import './ProductForm.css';
 
 const ProductForm = () => {
   const [formData, setFormData] = useState({

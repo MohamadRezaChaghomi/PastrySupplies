@@ -51,7 +51,7 @@ export default function Topbar({ onAuthClick }) {
             <AccountCircleOutlinedIcon className="iconPink" />
           </div>
 
-          <div className="topbarIconContainer">
+          {/* <div className="topbarIconContainer">
             <Button
               variant="outlined"
               size="small"
@@ -60,7 +60,7 @@ export default function Topbar({ onAuthClick }) {
               ورود / ثبت‌نام
             </Button>
           </div>
-
+ */}
         </div>
       </div>
     </div>

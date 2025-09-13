@@ -1,15 +1,14 @@
 import React from 'react';
 import {
   CssBaseline,
-  Container,
   Typography,
-  Stack,
   ThemeProvider,
   Box,
 } from '@mui/material';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import pinkTheme from '../../../../themes/pinkTheme';
 import './Message.css';
+import DashboardLayout from '../../components/dashboardLayout/DashboardLayout';
 
 const mockMessages = [
   {
@@ -39,25 +38,13 @@ const MessagesPage = () => {
   return (
     <ThemeProvider theme={pinkTheme}>
       <CssBaseline />
-      <Container maxWidth="md" sx={{ mt: 6, direction: 'rtl' }}>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="flex-end"
-          className="messages-header"
-        >
-          <ChatBubbleOutlineIcon className="messages-icon" />
-          <Typography className="messages-title-text" variant="h4" component="h1">
-            پیام‌ها
-          </Typography>
-        </Stack>
-
+      <DashboardLayout title="پیام ها" icon={ChatBubbleOutlineIcon}>
         <Box className="messages-list">
           {mockMessages.map((msg, index) => (
             <Box
               key={msg.id}
               className="message-card"
-              style={{ animationDelay: `${index * 150}ms` }} // اینجا تاخیر می‌ذاریم
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <Typography variant="h6" className="message-sender">
                 {msg.sender} - <span className="message-date">{msg.date}</span>
@@ -71,7 +58,7 @@ const MessagesPage = () => {
             </Box>
           ))}
         </Box>
-      </Container>
+      </DashboardLayout>
     </ThemeProvider>
   );
 };

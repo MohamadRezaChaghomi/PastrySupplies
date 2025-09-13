@@ -5,19 +5,15 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import pinkTheme from '../../../../themes/pinkTheme';
 import AdminProfileSettings from '../../components/settings/AdminProfileSettings';
 import SiteGlobalSettings from '../../components/settings/SiteGlobalSettings';
+import DashboardLayout from '../../components/dashboardLayout/DashboardLayout';
 
 import './AdminSettingsPage.css';
 
 const AdminSettingsPage = () => {
   return (
     <ThemeProvider theme={pinkTheme}>
-      <CssBaseline />
-      <Container maxWidth="md" sx={{ mt: 6, direction: 'rtl' }}>
-        <Box className="admin-settings-title">
-          <SettingsOutlinedIcon className="settings-icon" />
-          <Typography variant="h4" className="settings-title-text">تنظیمات</Typography>
-        </Box>
-
+     <CssBaseline />
+      <DashboardLayout title=" تنظیمات"  icon={SettingsOutlinedIcon}>
         <Card className="settings-card animated-fadein" sx={{ mb: 4 }}>
           <CardContent>
             <AdminProfileSettings />
@@ -29,7 +25,7 @@ const AdminSettingsPage = () => {
             <SiteGlobalSettings />
           </CardContent>
         </Card>
-      </Container>
+      </DashboardLayout>
     </ThemeProvider>
   );
 };
