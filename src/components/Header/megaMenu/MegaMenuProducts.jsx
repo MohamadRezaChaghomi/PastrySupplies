@@ -209,7 +209,7 @@ const categories = [
   },
 ];
 
-export default function MegaMenu({ show }) {
+export default function MegaMenuProducts({ show }) {
   const [hoveredIndex, setHoveredIndex] = useState(0);
 
   return (

@@ -33,8 +33,9 @@ export default function App() {
   const [authOpen, setAuthOpen] = useState(false); // ✅ اضافه شد
 
   return (
-    <ThemeProvider theme={pinkTheme}>
+    <>
       <Header />
-    </ThemeProvider>
+      <Footer />
+    </>
   );
 }

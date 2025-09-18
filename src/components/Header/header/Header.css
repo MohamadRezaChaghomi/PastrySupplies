@@ -8,13 +8,17 @@
 
 .logo-header {
   font-size: 64px;
-  color: #FF7CA8;
+  color: #ff7ca8;
   font-family: "DimaFantesy";
   text-shadow: 0px 0px 4px #7a7a7a67;
 }
 .nav-font {
   font-size: 14px;
   font-family: Estedad Medium;
+}
+
+.header-actions {
+  gap: 20px; /* فاصله پیش‌فرض دسکتاپ */
 }
 
 .search-container {
@@ -92,15 +96,20 @@
   font-family: "Estedad Medium", sans-serif;
   background-color: #ff7ca8;
   color: white;
-  height:60px;
+  height: 60px;
 }
 
-.categories-mobile a{
+.categories-mobile a {
   font-family: "Estedad Medium", sans-serif;
-  color: rgba(0,0,0,0.65);
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .categories-mobile a:hover {
-  color: rgba(0, 0, 0, 0.8)
+  color: rgba(0, 0, 0, 0.8);
 }
 
+@media (max-width: 1200px) {
+  .header-actions {
+    gap: 10px;
+  }
+}
