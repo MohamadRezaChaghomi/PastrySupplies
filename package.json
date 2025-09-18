@@ -16,6 +16,7 @@
     "axios": "^1.11.0",
     "bootstrap": "^5.3.7",
     "chance": "^1.1.13",
+    "js-cookie": "^3.0.5",
     "jss": "^10.10.0",
     "jss-rtl": "^0.3.0",
     "primeicons": "^7.0.0",
