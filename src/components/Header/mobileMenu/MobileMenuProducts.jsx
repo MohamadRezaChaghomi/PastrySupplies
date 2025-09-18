@@ -10,87 +10,11 @@ const categories = [
     subItems: [
       {
         title: "تم پسرانه",
-        items: [
-          "ماشین‌ها",
-          "مرد عنکبوتی",
-          "بتمن",
-          "پرنسسی",
-          "یونیکورن",
-          "فروزن",
-        ],
+        items: ["ماشین‌ها", "مرد عنکبوتی", "بتمن", "پرنسسی", "یونیکورن", "فروزن"],
       },
       {
         title: "تم دخترانه",
-        items: ["پرنسسی", "یونیکورن", "فروزن", "پرنسسی", "یونیکورن", "فروزن"],
-      },
-    ],
-  },
-  {
-    title: "لوازم تولد",
-    subItems: [
-      {
-        title: "تم پسرانه",
-        items: [
-          "ماشین‌ها",
-          "مرد عنکبوتی",
-          "بتمن",
-          "پرنسسی",
-          "یونیکورن",
-          "فروزن",
-        ],
-      },
-    ],
-  },
-  {
-    title: "تم‌ها",
-    subItems: [
-      {
-        title: "تم دخترانه",
-        items: ["پرنسسی", "یونیکورن", "فروزن", "پرنسسی", "یونیکورن", "فروزن"],
-      },
-      {
-        title: "تم پسرانه",
-        items: [
-          "ماشین‌ها",
-          "مرد عنکبوتی",
-          "بتمن",
-          "پرنسسی",
-          "یونیکورن",
-          "فروزن",
-        ],
-      },
-    ],
-  },
-  {
-    title: "لوازم تولد",
-    subItems: [
-      {
-        title: "بادکنک",
-        items: ["معمولی", "هلیومی"],
-      },
-      {
-        title: "شمع تولد",
-        items: ["شمع عدد", "شمع فانتزی", "پرنسسی", "یونیکورن", "فروزن"],
-      },
-    ],
-  },
-  {
-    title: "تم‌ها",
-    subItems: [
-      {
-        title: "تم دخترانه",
-        items: ["پرنسسی", "یونیکورن", "فروزن", "پرنسسی", "یونیکورن", "فروزن"],
-      },
-      {
-        title: "تم پسرانه",
-        items: [
-          "ماشین‌ها",
-          "مرد عنکبوتی",
-          "بتمن",
-          "پرنسسی",
-          "یونیکورن",
-          "فروزن",
-        ],
+        items: ["پرنسسی", "یونیکورن", "فروزن"],
       },
     ],
   },
@@ -110,7 +34,7 @@ const categories = [
 ];
 
 const MobileMenu = () => {
-  const [showCategory, setShowCategory] = useState(true);
+  const [showCategory, setShowCategory] = useState(false); // پیش‌فرض بسته
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleSubItems = (index) => {
@@ -119,12 +43,20 @@ const MobileMenu = () => {
 
   return (
     <>
+      {/* دکمه اصلی محصولات */}
       <div
         className="mobile-menu"
+        onClick={() => setShowCategory((prev) => !prev)}
       >
         محصولات
+        {showCategory ? (
+          <KeyboardArrowUpIcon />
+        ) : (
+          <KeyboardArrowDownIcon />
+        )}
       </div>
 
+      {/* collapse اصلی */}
       <Collapse className="Collapse-title" in={showCategory}>
         <div className="ps-2">
           {categories.map((cat, index) => (
@@ -148,19 +80,13 @@ const MobileMenu = () => {
                 <div className="p-3">
                   {cat.subItems.map((sub, subIndex) => (
                     <div key={subIndex} className="mb-1">
-                      <a
-                        href="#"
-                        className="d-block text-decoration-none"
-                      >
+                      <a href="#" className="d-block text-decoration-none">
                         {sub.title}
                       </a>
-                      <ul className="ps-3 subitems">
+                      <ul className="p-0 subitems">
                         {sub.items.map((item, i) => (
                           <li key={i}>
-                            <a
-                              href="#"
-                              className="text-decoration-none"
-                            >
+                            <a href="#" className="text-decoration-none d-block w-100">
                               {item}
                             </a>
                           </li>
