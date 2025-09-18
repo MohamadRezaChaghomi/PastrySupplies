@@ -150,7 +150,7 @@ export default function Header() {
         style={{ width: 320 }}
       >
         <Offcanvas.Header className="p-0">
-          <button className="login-register-mobile-btn d-flex align-items-center justify-content-center">
+          <button  className="login-register-mobile-btn d-flex align-items-center justify-content-center">
             ورود | ثبت‌نام
           </button>
         </Offcanvas.Header>

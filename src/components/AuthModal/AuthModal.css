@@ -5,8 +5,17 @@
   justify-content: space-between;
   align-items: center;
   direction: rtl;
-  font-family: 'Estedad', Tahoma, sans-serif;
+  font-family: Estedad Regular !important;
   font-weight: bold;
+}
+.MuiDialog-root * {
+  font-family: "Estedad Regular"!important;
+  font-size: 14px !important;
+
+}
+
+.MuiTabs-indicator {
+  background-color: #2196f3 !important;
 }
 
 .admin-btn {
@@ -49,6 +58,10 @@
 
 .switch-btn:hover {
   background-color: #fce4ec !important;
+}
+
+.email-input-login {
+  font-size: 2px !important;
 }
 
 .switch-btn.active {
