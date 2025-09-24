@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+.best-selling-products-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #ff7ca8;
+  border-radius: 15px;
+  padding: 18px;
+  overflow: hidden;
+  direction: rtl;
+  min-width: 0;
+}
+
+.promo-col {
+  font-family: Estedad Medium;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+  text-align: right;
+  height: -webkit-fill-available;
+}
+
+.promo-col-image {
+  width: 90px;
+  height: 90px;
+}
+
+.promo-col-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.products-wrapper {
+  min-width: 0;
+  position: relative;
+}
+
+.products-wrapper-inner {
+  position: relative;
+  width: 100%;
+}
+
+.products-container {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  min-height: 1px;
+}
+.products-container a {
+  text-decoration: none;
+}
+.products-container::-webkit-scrollbar {
+  display: none;
+}
+.products-container {
+  scrollbar-width: none;
+}
+
+/* دکمه‌های اسکرول — روی لبه محصولات قرار می‌گیرند */
+.scroll-btn {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+  color: rgba(66, 71, 80, 0.68);
+  border: 2px solid rgba(66, 71, 80, 0.54);
+  display: flex;
+  align-items: self-end;
+  justify-content: center;
+  z-index: 12;
+  cursor: pointer;
+  font-size: 24px;
+}
+.scroll-btn.left {
+  left: -15px;
+}
+.scroll-btn.right {
+  right: -15px;
+}
+
+.product-card {
+  font-family: Estedad Regular;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.2s ease;
+  width: 160px;
+  height: 255px;
+  padding: 10px;
+  flex: 0 0 160px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  font-size: 10px;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.product-name {
+  font-size: 10px;
+  margin: 10px 0 6px;
+  color: #333;
+  min-height: 36px;
+  line-height: 1.3rem;
+  display: -webkit-box; /* مورد نیاز برای line-clamp */
+  -webkit-line-clamp: 2; /* حداکثر دو خط */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* مخفی کردن متن اضافی */
+  text-overflow: ellipsis; /* نمایش ... */
+}
+
+.product-meta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.price-block {
+  text-align: right;
+}
+.final-price {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: black;
+  gap: 2px;
+}
+.original-price {
+  text-decoration: line-through;
+  font-size: 12px;
+  color: #999;
+  margin-right: 48px;
+}
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .promo-col {
+    min-width: 140px;
+  }
+  .promo-col-image {
+    width: 80px;
+    height: 80px;
+  }
+  .promo-col-title {
+    font-size: 22px;
+  }
+  .product-card {
+    width: 130px;
+    height: 228px;
+    padding: 10px;
+    flex: 0 0 130px;
+    min-width: 130px;
+  }
+}
+
+@media (max-width: 576px) {
+  .promo-col {
+    min-width: 120px;
+  }
+  .promo-col-image {
+    width: 70px;
+    height: 70px;
+  }
+  .promo-col-title {
+    font-size: 20px;
+  }
+  .product-card {
+    width: 120px;
+    height: 220px;
+    padding: 10px;
+    flex: 0 0 120px;
+    min-width: 120px;
+  }
+}
