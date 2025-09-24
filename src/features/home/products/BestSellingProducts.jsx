@@ -6,7 +6,7 @@ import "./BestSellingProducts.css";
 
 const BestSellingProducts = () => {
   return (
-    <div className="my-5 mx-5">
+    <div className="my-5">
       <div className="best-selling-products-container">
         <div className="promo-col">
           <div className="best-selling-products-title w-100 h-100">
@@ -19,7 +19,6 @@ const BestSellingProducts = () => {
           </div>
         </div>
 
-        {/* بخش محصولات — تنها این بخش اسکرول می‌خورد */}
         <div className="products-wrapper">
           <CardBestSellingProducts />
         </div>
