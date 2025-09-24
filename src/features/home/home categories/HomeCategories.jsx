@@ -27,15 +27,15 @@ const categories = [
 
 export default function HomeCategories() {
   return (
-    <Container>
-      <div className="categories-container">
+    <div className="mx-5 my-5">
+      <div className="home-categories-container">
         {categories.map((cat) => (
-          <div className="category-item" key={cat.title} style={{ backgroundColor: cat.color }}>
-            <img className="category-icon m-0" src={cat.icon} alt={cat.title} />
-            <p className="category-title m-0">{cat.title}</p>
+          <div className="home-category-item" key={cat.title} style={{ backgroundColor: cat.color }}>
+            <img className="home-category-icon m-0" src={cat.icon} alt={cat.title} />
+            <p className="home-category-title m-0">{cat.title}</p>
           </div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 }

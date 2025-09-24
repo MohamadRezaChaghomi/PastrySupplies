@@ -6,6 +6,8 @@ import AppRoutes from "./routes/AppRoutes";
 import AuthModal from "../src/components/AuthModal/AuthModal";
 import Footer from "./components/Footer/Footer/Footer";
 import Header from "./components/Header/header/Header";
+import HomeCategories from "./features/home/home categories/HomeCategories";
+import BestSellingProducts from "./features/home/products/BestSellingProducts";
 import InfoNotice from "./components/Info-notice/InfoNotice";
 
 import "./App.css";
@@ -34,8 +36,8 @@ export default function App() {
 
   return (
     <>
-      <Header />
-      <Footer />
+      <HomeCategories />
+      <BestSellingProducts />
     </>
   );
 }
