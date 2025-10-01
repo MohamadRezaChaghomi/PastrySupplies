@@ -36,8 +36,10 @@ export default function App() {
 
   return (
     <>
+      <Header />
       <HomeCategories />
       <BestSellingProducts />
+      <Footer />
     </>
   );
 }

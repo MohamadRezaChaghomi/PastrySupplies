@@ -27,7 +27,7 @@ const categories = [
 
 export default function HomeCategories() {
   return (
-    <div className="mx-5 my-5">
+    <div className="home-categories">
       <div className="home-categories-container">
         {categories.map((cat) => (
           <div className="home-category-item" key={cat.title} style={{ backgroundColor: cat.color }}>
