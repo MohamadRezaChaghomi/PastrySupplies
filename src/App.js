@@ -9,6 +9,7 @@ import Header from "./components/Header/header/Header";
 import HomeCategories from "./features/home/home categories/HomeCategories";
 import BestSellingProducts from "./features/home/products/BestSellingProducts";
 import InfoNotice from "./components/Info-notice/InfoNotice";
+import ShadiLandExplanation from "./features/home/shadi land Explanation/ShadiLandExplanation"
 
 import "./App.css";
 
@@ -39,6 +40,8 @@ export default function App() {
       <Header />
       <HomeCategories />
       <BestSellingProducts />
+      <ShadiLandExplanation />
+      <InfoNotice />
       <Footer />
     </>
   );
