@@ -34,12 +34,37 @@ const ShadiLandExplanation = () => {
           useWorker: true,
         });
 
+        let particleCount = 260;
+        let originY = -0.8;
+        let spread = 140;
+        let gravity = 0.25;
+
+        if (window.innerWidth < 450) {
+          particleCount = 350;
+          originY = -0.4;
+          spread = 100;
+          gravity = 0.5;
+
+        } else if (window.innerWidth < 576) {
+          particleCount = 350;
+          originY = -0.4;
+          spread = 110;
+        } else if (window.innerWidth < 768) {
+          particleCount = 350;
+          originY = -0.6;
+          spread = 160;
+        } else if (window.innerWidth < 1200) {
+          particleCount = 260;
+          originY = -0.7;
+          spread = 150;
+        }
+
         myConfetti({
-          particleCount: 250,
+          particleCount,
           angle: 270,
-          spread: 140,
-          origin: { y: -0.8, x: 0.5 },
-          gravity: 0.3,
+          spread,
+          origin: { y: originY, x: 0.5 },
+          gravity,
           colors: ["#ff5e6c", "#ffd166", "#06d6a0", "#118ab2", "#073b4c"],
         });
 
