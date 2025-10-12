@@ -96,7 +96,6 @@
   width: 160px;
   height: 255px;
   padding: 10px;
-  flex: 0 0 160px;
   min-width: 160px;
   display: flex;
   flex-direction: column;
@@ -134,9 +133,6 @@
   font-size: 12px;
 }
 
-.price-block {
-  text-align: right;
-}
 .final-price {
   display: flex;
   align-items: center;
@@ -157,7 +153,29 @@
   justify-content: space-between;
   width: 100%;
   color: white;
+}
+
+.discount-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.discount-badge {
+  flex-shrink: 0;
+  color: white;
+  background-color: #ff446a;
+  width: 32px;
+  height: 20px;
   border-radius: 16px;
+}
+
+.price-block {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
 }
 
 @media (max-width: 768px) {
@@ -169,13 +187,6 @@
     width: 100%;
     margin: 0;
     text-align: start;
-  }
-  .product-card {
-    width: 130px;
-    height: 228px;
-    padding: 10px;
-    flex: 0 0 130px;
-    min-width: 130px;
   }
   .best-selling-products-container {
     flex-direction: column;
@@ -194,6 +205,24 @@
   .scroll-btn {
     display: none;
   }
+  .discount-section {
+    gap: 4px;
+  }
+
+  .price-block {
+    align-items: center;
+  }
+
+  .original-price {
+    order: 1;
+    margin: 0;
+    color: #888;
+  }
+
+  .final-price {
+    order: 2;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -204,10 +233,9 @@
     font-size: 20px;
   }
   .product-card {
-    width: 120px;
-    height: 220px;
+    width: 130px;
+    height: 225px;
     padding: 10px;
-    flex: 0 0 120px;
-    min-width: 120px;
+    min-width: 130px;
   }
 }

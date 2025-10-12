@@ -11,6 +11,8 @@ import BestSellingProducts from "./features/home/products/BestSellingProducts";
 import InfoNotice from "./components/Info-notice/InfoNotice";
 import ShadiLandExplanation from "./features/home/shadi land Explanation/ShadiLandExplanation"
 import IntroSection from "./features/home/intro section/IntroSection"
+import BodyImages from "./features/home/body images/BodyImages"
+
 
 import "./App.css";
 
@@ -42,6 +44,7 @@ export default function App() {
       <IntroSection />
       <HomeCategories />
       <BestSellingProducts />
+      <BodyImages />
       <ShadiLandExplanation />
       <InfoNotice />
       <Footer />

@@ -140,27 +140,22 @@ const CardBestSellingProducts = () => {
                 <h3 className="product-name">{p.name}</h3>
 
                 <div className="product-meta">
-                  <div className="discount">
-                    <div
-                      className="d-flex align-items-center justify-content-center"
-                      style={{
-                        backgroundColor: "#ff446a",
-                        width: 32,
-                        height: 20,
-                        borderRadius: 16,
-                      }}
-                    >
-                      {p.discount.toLocaleString()} %
+                  <div className="discount-section">
+                    <div className="discount-badge d-flex align-items-center justify-content-center">
+                      {p.discount.toLocaleString()}%
                     </div>
-                    <div className="final-price">
-                      {finalPrice.toLocaleString()}{" "}
-                      <p className="m-0" style={{ fontSize: 8 }}>
-                        تومان
-                      </p>
+
+                    <div className="price-block">
+                      <div className="original-price">
+                        {p.price.toLocaleString()}
+                      </div>
+                      <div className="final-price">
+                        {finalPrice.toLocaleString()}
+                        <span style={{ fontSize: "10px" }}> تومان</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="original-price">{p.price.toLocaleString()}</div>
               </a>
             </SwiperSlide>
           );

@@ -41,6 +41,9 @@
   .home-categories {
     margin: 10px;
   }
+  .home-categories-container {
+    gap: 20px;
+  }
   .home-category-item {
     width: 140px;
     height: 140px;
