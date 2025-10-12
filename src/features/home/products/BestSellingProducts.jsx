@@ -10,7 +10,7 @@ const BestSellingProducts = () => {
       <div className="best-selling-products-container">
         <div className="promo-col">
           <div className="best-selling-products-title w-100 h-100">
-            <div className="d-flex flex-column-reverse align-items-center justify-content-around h-100">
+            <div className="d-flex flex-column-reverse align-items-center justify-content-around h-100 gap-3">
               <div>
               <img className="promo-col-image" src={BestSeller} alt="Best Seller"/>
               </div>

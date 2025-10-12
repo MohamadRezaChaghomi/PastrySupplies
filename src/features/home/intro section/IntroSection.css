@@ -1,0 +1,104 @@
+.shadiland-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 45px;
+  transition: all 0.3s ease;
+}
+
+.shadiland-hero__image {
+  display: flex;
+  justify-content: end;
+}
+
+.shadiland-hero__image img {
+  width: 100%;
+  height: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* محتوای متن */
+.shadiland-hero__content {
+  text-align: right;
+  min-width: 300px;
+}
+
+.shadiland-hero__text {
+  font-family: "Estedad Bold";
+  font-size: 50px;
+  text-shadow: 0 0 8px #9797974f;
+  color: #111;
+}
+
+.shadiland-hero__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-btn {
+  width: 210px;
+  height: 64px;
+  border: none;
+  border-radius: 40px;
+  font-family: "Estedad Medium";
+  background-color: #ff7ca8;
+  font-size: 16px;
+  color: white;
+  transition: all 0.25s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #ff6196ff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  .shadiland-hero__text {
+    font-size: 46px;
+  }
+  /* .hero-btn {
+    width: 190px;
+    height: 58px;
+  } */
+  .shadiland-hero__image img {
+    width: 90%;
+    height: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  .shadiland-hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .shadiland-hero__text {
+    text-align: center;
+  }
+  .shadiland-hero__image img {
+    width: 100%;
+    height: 290px;
+  }
+}
+@media (max-width: 576px) {
+  .shadiland-hero__buttons {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-btn {
+    width: 205px;
+    height: 58px;
+  }
+  .shadiland-hero__text {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  .shadiland-hero__image img {
+    width: 100%;
+    height: 250px;
+  }
+  .shadiland-hero__image{
+    width: 100%;
+  }
+}

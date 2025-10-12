@@ -1,0 +1,28 @@
+.body-image {
+  object-fit: cover;
+  height: 290px;
+  width: 45%;
+  border-radius: 16px;
+}
+
+@media (max-width: 992px) {
+  .body-image {
+    height: 230px;
+    width: 47%;
+  }
+}
+@media (max-width: 768px) {
+  .body-image {
+    height: 250px;
+    width: 85%;
+  }
+  .body-images {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .body-image {
+    height: 200px;
+    width: 100%;
+  }
+}

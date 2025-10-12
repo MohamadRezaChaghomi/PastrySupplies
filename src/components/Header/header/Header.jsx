@@ -103,7 +103,7 @@ export default function Header() {
           {/* ناوبری */}
           <Nav
             className="nav-font d-flex align-items-end"
-            style={{ gap: 15, height: 55 }}
+            style={{ gap: 10, height: 55 }}
           >
             <Nav.Link
               onMouseEnter={() => setShowMegaMenuProducts(true)}

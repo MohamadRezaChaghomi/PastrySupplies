@@ -9,6 +9,10 @@ import Header from "./components/Header/header/Header";
 import HomeCategories from "./features/home/home categories/HomeCategories";
 import BestSellingProducts from "./features/home/products/BestSellingProducts";
 import InfoNotice from "./components/Info-notice/InfoNotice";
+import ShadiLandExplanation from "./features/home/shadi land Explanation/ShadiLandExplanation"
+import IntroSection from "./features/home/intro section/IntroSection"
+import BodyImages from "./features/home/body images/BodyImages"
+
 
 import "./App.css";
 
@@ -36,8 +40,14 @@ export default function App() {
 
   return (
     <>
+      <Header />
+      <IntroSection />
       <HomeCategories />
       <BestSellingProducts />
+      <BodyImages />
+      <ShadiLandExplanation />
+      <InfoNotice />
+      <Footer />
     </>
   );
 }

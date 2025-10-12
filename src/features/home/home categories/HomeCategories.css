@@ -1,8 +1,11 @@
 /* src/features/home/HomeCategories.css */
+.home-categories {
+  margin: 30px;
+}
 .home-categories-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px; /* فاصله بین آیتم‌ها */
+  gap: 40px;
   justify-content: center;
   margin: 20px 0;
 }
@@ -30,22 +33,19 @@
   color: black;
 }
 
-
 .home-category-title {
   font-size: 16px;
 }
-@media (max-width: 992px) {
+
+@media (max-width: 576px) {
+  .home-categories {
+    margin: 10px;
+  }
   .home-categories-container {
-    gap: 28px;
+    gap: 20px;
   }
   .home-category-item {
     width: 140px;
     height: 140px;
-  }
-  .home-category-title {
-    font-size: 14px;
-  }
-  .home-category-icon {
-    width: 52px;
   }
 }
