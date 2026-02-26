@@ -18,7 +18,7 @@ const SiteGlobalSettings = () => {
 
   return (
     <>
-      <h3 className="site-global-title">تنظیمات کلی سایت</h3>
+      <h3 className="site-global-title">تنظیمات سایت</h3>
       <Stack spacing={2}>
         <TextField
           label="آدرس لوگو (URL)"

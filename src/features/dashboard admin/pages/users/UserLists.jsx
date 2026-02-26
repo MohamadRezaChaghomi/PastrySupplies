@@ -15,13 +15,10 @@ const userColumns = [
 ];
 
 const users = [
-  { id: 1, name: 'علی رضایی', email: 'ali@example.com', role: 'مدیر' },
-  { id: 2, name: 'مریم احمدی', email: 'maryam@example.com', role: 'کارمند' },
-  { id: 3, name: 'حسین موسوی', email: 'hossein@example.com', role: 'کاربر' },
   ...Array.from({ length: 1000 }, (_, i) => ({
-    id: i + 4,
-    name: `کاربر ${i + 4}`,
-    email: `user${i + 4}@example.com`,
+    id: i + 1,
+    name: `کاربر ${i + 1}`,
+    email: `user${i + 1}@example.com`,
     role: i % 2 === 0 ? 'کارمند' : 'کاربر',
   })),
 ];
